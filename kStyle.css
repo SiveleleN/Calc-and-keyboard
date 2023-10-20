@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid purple;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: powderblue;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    width: 600px;
+}
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: peachpuff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.key.Backspace {
+    grid-column: span 2;
+}
+
+.key.Enter {
+    grid-column: span 2;
+}
+
+.key.Shift {
+    grid-column: span 2;
+
+}
+
+.key.Space {
+    grid-column: span 5;
+}
+
+.key.Number {
+    grid-column: span 2;
+}

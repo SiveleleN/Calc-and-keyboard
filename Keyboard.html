@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+    <link rel="stylesheet" href="/kStyle.css">
+</head>
+<body>
+    <div class="keyboard" id="keyboard">
+        <div class="key number" onclick="appendToOutput('1')">1</div>
+        <div class="key number" onclick="appendToOutput('2')">2</div>
+        <div class="key number" onclick="appendToOutput('3')">3</div>
+        <div class="key number" onclick="appendToOutput('4')">4</div>
+        <div class="key number" onclick="appendToOutput('5')">5</div>
+        <div class="key number" onclick="appendToOutput('6')">6</div>
+        <div class="key number" onclick="appendToOutput('7')">7</div>
+        <div class="key number" onclick="appendToOutput('8')">8</div>
+        <div class="key number" onclick="appendToOutput('9')">9</div>
+        <div class="key number" onclick="appendToOutput('0')">0</div>
+        <div class="key" onclick="appendToOutput('Q')">Q</div>
+        <div class="key" onclick="appendToOutput('W')">W</div>
+        <div class="key" onclick="appendToOutput('E')">E</div>
+        <div class="key" onclick="appendToOutput('R')">R</div>
+        <div class="key" onclick="appendToOutput('T')">T</div>
+        <div class="key" onclick="appendToOutput('Y')">Y</div>
+        <div class="key" onclick="appendToOutput('U')">U</div>
+        <div class="key" onclick="appendToOutput('I')">I</div>
+        <div class="key" onclick="appendToOutput('O')">O</div>
+        <div class="key" onclick="appendToOutput('P')">P</div>
+        <div class="key" onclick="clearOutput()">Backspace</div>
+        <div class="key" onclick="appendToOutput('A')">A</div>
+        <div class="key" onclick="appendToOutput('S')">S</div>
+        <div class="key" onclick="appendToOutput('D')">D</div>
+        <div class="key" onclick="appendToOutput('F')">F</div>
+        <div class="key" onclick="appendToOutput('G')">G</div>
+        <div class="key" onclick="appendToOutput('H')">H</div>
+        <div class="key" onclick="appendToOutput('J')">J</div>
+        <div class="key" onclick="appendToOutput('K')">K</div>
+        <div class="key" onclick="appendToOutput('L')">L</div>
+        <div class="key" onclick="appendToOutput('Enter')">Enter</div>
+        <div class="key" onclick="appendToOutput('Shift')">Shift</div>
+        <div class="key" onclick="appendToOutput(',')">,</div>
+        <div class="key" onclick="appendToOutput('Z')">Z</div>
+        <div class="key" onclick="appendToOutput('X')">X</div>
+        <div class="key" onclick="appendToOutput('C')">C</div>
+        <div class="key" onclick="appendToOutput('V')">V</div>
+        <div class="key" onclick="appendToOutput('B')">B</div>
+        <div class="key" onclick="appendToOutput('N')">N</div>
+        <div class="key" onclick="appendToOutput('M')">M</div>
+        <div class="key" onclick="appendToOutput('.')">.</div>
+        <div class="key" onclick="appendToOutput(':')">:</div>
+        <div class="key" onclick="appendToOutput('?')">?</div>
+        <div class="key" onclick="appendToOutput('/')">/</div>
+        <div class="key" onclick="appendToOutput('=')">=</div>
+        <div class="key" onclick="appendToOutput('&')"> & </div>
+        <div class="key" onclick="appendToOutput('\'')">'</div>
+        <div class="key" onclick="appendToOutput('\'')">"</div>
+        <div class="key" onclick="appendToOutput(':')">:</div>
+        <div class="key" onclick="toggleNumbers()">Numbers</div>
+        <div class="key space" onclick="appendToOutput(' ')">Space</div>
+    </div>
+    <input type="text" id="output" class="output" readonly>
+    <script>
+        let isNumbersEnabled = false;
+
+        function appendToOutput(value) {
+            const output = document.getElementById('output');
+            output.value = output.value === '0' ? value : output.value + value;
+        }
+
+        function clearOutput() {
+            document.getElementById('output').value = '0';
+        }
+
+        function toggleNumbers() {
+            isNumbersEnabled = !isNumbersEnabled;
+            const numberKeys = document.querySelectorAll('.key.number');
+            numberKeys.forEach((key) => {
+                key.style.display = isNumbersEnabled ? 'block' : 'none';
+            });
+        }
+
+        function keyboardResult() {
+            try {
+                const output = document.getElementById('output');
+                output.value = eval(output.value);
+            } catch (error) {
+                document.getElementById('output').value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>
