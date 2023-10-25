@@ -1,101 +1,327 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Keyboard</title>
-    <link rel="stylesheet" href="/kStyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard</title>
+  <link rel="stylesheet" href="/kStyle.css">
 </head>
+
 <body>
-    <div class="keyboard" id="keyboard">
-        <div class="key number" onclick="appendToOutput('1')">1</div>
-        <div class="key number" onclick="appendToOutput('2')">2</div>
-        <div class="key number" onclick="appendToOutput('3')">3</div>
-        <div class="key number" onclick="appendToOutput('4')">4</div>
-        <div class="key number" onclick="appendToOutput('5')">5</div>
-        <div class="key number" onclick="appendToOutput('6')">6</div>
-        <div class="key number" onclick="appendToOutput('7')">7</div>
-        <div class="key number" onclick="appendToOutput('8')">8</div>
-        <div class="key number" onclick="appendToOutput('9')">9</div>
-        <div class="key number" onclick="appendToOutput('0')">0</div>
-        <div class="key" onclick="appendToOutput('Q')">Q</div>
-        <div class="key" onclick="appendToOutput('W')">W</div>
-        <div class="key" onclick="appendToOutput('E')">E</div>
-        <div class="key" onclick="appendToOutput('R')">R</div>
-        <div class="key" onclick="appendToOutput('T')">T</div>
-        <div class="key" onclick="appendToOutput('Y')">Y</div>
-        <div class="key" onclick="appendToOutput('U')">U</div>
-        <div class="key" onclick="appendToOutput('I')">I</div>
-        <div class="key" onclick="appendToOutput('O')">O</div>
-        <div class="key" onclick="appendToOutput('P')">P</div>
-        <div class="key" onclick="clearOutput()">Backspace</div>
-        <div class="key" onclick="appendToOutput('A')">A</div>
-        <div class="key" onclick="appendToOutput('S')">S</div>
-        <div class="key" onclick="appendToOutput('D')">D</div>
-        <div class="key" onclick="appendToOutput('F')">F</div>
-        <div class="key" onclick="appendToOutput('G')">G</div>
-        <div class="key" onclick="appendToOutput('H')">H</div>
-        <div class="key" onclick="appendToOutput('J')">J</div>
-        <div class="key" onclick="appendToOutput('K')">K</div>
-        <div class="key" onclick="appendToOutput('L')">L</div>
-        <div class="key" onclick="appendToOutput('Enter')">Enter</div>
-        <div class="key" onclick="appendToOutput('Shift')">Shift</div>
-        <div class="key" onclick="appendToOutput(',')">,</div>
-        <div class="key" onclick="appendToOutput('Z')">Z</div>
-        <div class="key" onclick="appendToOutput('X')">X</div>
-        <div class="key" onclick="appendToOutput('C')">C</div>
-        <div class="key" onclick="appendToOutput('V')">V</div>
-        <div class="key" onclick="appendToOutput('B')">B</div>
-        <div class="key" onclick="appendToOutput('N')">N</div>
-        <div class="key" onclick="appendToOutput('M')">M</div>
-        <div class="key" onclick="appendToOutput('.')">.</div>
-        <div class="key" onclick="appendToOutput(':')">:</div>
-        <div class="key" onclick="appendToOutput('?')">?</div>
-        <div class="key" onclick="appendToOutput('/')">/</div>
-        <div class="key" onclick="appendToOutput('=')">=</div>
-        <div class="key" onclick="appendToOutput('&')"> & </div>
-        <div class="key" onclick="appendToOutput('\'')">'</div>
-        <div class="key" onclick="appendToOutput('\'')">"</div>
-        <div class="key" onclick="appendToOutput(':')">:</div>
-        <div class="key" onclick="toggleNumbers()">Numbers</div>
-        <div class="keyboard" id="keyboard">
-            
+  <div class="warpper fl bg">
+    <div class="container bg1">
+      <div class="main-l fl">
+        <div class="cunction fl bg2">
+          Esc</div>
+        <div class="cunction mfl bg2">
+          F1</div>
+        <div class="cunction mfl bg2">
+          F2</div>
+        <div class="cunction mfl bg2">
+          F3</div>
+        <div class="cunction mfl bg2">
+          F4</div>
+        <div class="cunction mfl bg2">
+          F5</div>
+        <div class="cunction mfl bg2">
+          F6</div>
+        <div class="cunction mfl bg2">
+          F7</div>
+        <div class="cunction mfl bg2">
+          F8</div>
+        <div class="cunction mfl bg2">
+          F9</div>
+        <div class="cunction mfl bg2">
+          F10</div>
+        <div class="cunction mfl bg2">
+          F11</div>
+        <div class="cunction mfl bg2">
+          F12</div>
+        <div class="cunction mfl bg2">
+          PrtScr</div>
+        <div class="cunction mfl bg2">
+          Insert</div>
+        <div class="cunction mfl bg2">
+          Delete</div>
+        <div class="number fl bg2">
+          ~<p>
+            `</p>
         </div>
-        <input type="text" id="output" class="output" readonly>
-        <script>
-    
-        </script>
-        <div class="key space" onclick="appendToOutput(' ')">Space</div>
+        <div class="number mfl bg2">
+          !<br>1</div>
+        <div class="number mfl bg2">
+          @<br>2</div>
+        <div class="number mfl bg2">
+          #<br>3</div>
+        <div class="number mfl bg2">
+          $<br>4</div>
+        <div class="number mfl bg2">
+          %<br>5</div>
+        <div class="number mfl bg2">
+          ^<br>6</div>
+        <div class="number mfl bg2">
+          &<br>7</div>
+        <div class="number mfl bg2">
+          *<br>8</div>
+        <div class="number mfl bg2">
+          (<br>9</div>
+        <div class="number mfl bg2">
+          )<br>0</div>
+        <div class="number mfl bg2">
+          _<br>-</div>
+        <div class="number mfl bg2">
+          +<br>=</div>
+        <div class="number fr bg2 back">
+          <p class="eng">
+            Backspace</p>
+        </div>
+        <div class="number fl bg2 back">
+          <p class="eng tab">
+            Tab</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            Q</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            W</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            E</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            R</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            T</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            Y</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            U</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            I</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            O</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            P</p>
+        </div>
+        <div class="number mfl bg2">
+          {<br>[</div>
+        <div class="number mfl bg2">
+          }<br>]</div>
+        <div class="number fr bg2">
+          |<br>\</div>
+        <div class="number fl bg2 caps">
+          <p class="eng mrt">
+            Caps Lock</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            A</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            S</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            D</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            F</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            G</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            H</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            J</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            K</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            L</p>
+        </div>
+        <div class="number mfl bg2">
+          :<br>;</div>
+        <div class="number mfl bg2">
+          "<br>'</div>
+        <div class="number fr bg2 caps">
+          <p class="eng lent">
+            Enter</p>
+        </div>
+        <div class="number fl bg2 shift">
+          <p class="eng sft">
+            Shift</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            Z</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            X</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            C</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            V</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            B</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            N</p>
+        </div>
+        <div class="number mfl bg2">
+          <p class="eng">
+            M</p>
+        </div>
+        <div class="number mfl bg2">
+          <br>,
+        </div>
+        <div class="number mfl bg2">
+          ><br>.</div>
+        <div class="number mfl bg2">
+          ?<br>/</div>
+        <div class="number fr bg2 shift">
+          <p class="eng lsft">
+            Shift</p>
+        </div>
+        <div class="space fl bg2 ctrl">
+          <p class="eng mrt">
+            Ctrl</p>
+        </div>
+        <div class="space mfl bg2">
+          <p class="eng">
+            Fn</p>
+        </div>
+        <div class="space mfl bg2">
+          <p class="eng">
+            <i class="fab fa-windows"></i>
+          </p>
+        </div>
+        <div class="space mfl bg2">
+          <p class="eng">
+            Alt</p>
+        </div>
+        <div class="space mfl bg2 sp">
+        </div>
+        <div class="space mfl bg2">
+          <p class="eng">
+            Alt</p>
+        </div>
+        <div class="space mfl bg2">
+          <p class="eng">
+            Ctrl</p>
+        </div>
+        <div class="space fr aro">
+          <div class="arobtn fl">
+            <div class="arobtnsub">
+            </div>
+            <div class="arobtnsub bg2 ardwn">
+              ←</div>
+          </div>
+          <div class="arobtn mfl2">
+            <div class="arobtnsub bg2">
+              ↑</div>
+            <div class="arobtnsub bg2 ardwn">
+              ↓</div>
+          </div>
+          <div class="arobtn fr">
+            <div class="arobtnsub">
+            </div>
+            <div class="arobtnsub bg2 ardwn">
+              →</div>
+          </div>
+        </div>
+      </div>
+      <!--The end of main keys-->
+
+      <div class="mail-r fr">
+        <div class="lnum fl">
+          <div class="pgup fl bg2">
+            PgUp</div>
+          <div class="pgup mfl3 bg2">
+            PgDn</div>
+          <div class="pgup fr bg2">
+            Home</div>
+          <div class="calnub fl bg2">
+            Num<br>Lock</div>
+          <div class="calnub mfl3 bg2 eng">
+            /</div>
+          <div class="calnub fr bg2 eng">
+            *</div>
+          <div class="calnub fl bg2 eng">
+            7</div>
+          <div class="calnub mfl3 bg2 eng">
+            8</div>
+          <div class="calnub fr bg2 eng">
+            9</div>
+          <div class="calnub fl bg2 eng">
+            4</div>
+          <div class="calnub mfl3 bg2 eng">
+            5</div>
+          <div class="calnub fr bg2 eng">
+            6</div>
+          <div class="calnub fl bg2 eng">
+            1</div>
+          <div class="calnub mfl3 bg2 eng">
+            2</div>
+          <div class="calnub fr bg2 eng">
+            3</div>
+          <div class="calzeo fl bg2">
+            <p class="eng">
+              0</p>
+          </div>
+          <div class="calnub fr bg2 dot">
+            <p class="eng">
+              .</p>
+          </div>
+        </div>
+        <div class="rsym fr">
+          <div class="end bg2">
+            End</div>
+          <div class="mins bg2 eng">
+            -</div>
+          <div class="plus bg2">
+            +</div>
+          <div class="enter bg2">
+            Enter</div>
+        </div>
+      </div>
+
     </div>
-    <input type="text" id="output" class="output" readonly>
-    <script>
-        let isNumbersEnabled = false;
-
-        function appendToOutput(value) {
-            const output = document.getElementById('output');
-            output.value = output.value === '0' ? value : output.value + value;
-        }
-
-        function clearOutput() {
-            document.getElementById('output').value = '0';
-        }
-
-        function toggleNumbers() {
-            isNumbersEnabled = !isNumbersEnabled;
-            const numberKeys = document.querySelectorAll('.key.number');
-            numberKeys.forEach((key) => {
-                key.style.display = isNumbersEnabled ? 'block' : 'none';
-            });
-        }
-
-        function keyboardResult() {
-            try {
-                const output = document.getElementById('output');
-                output.value = eval(output.value);
-            } catch (error) {
-                document.getElementById('output').value = 'Error';
-            }
-        }
-    </script>
+  </div>
 </body>
 </html>

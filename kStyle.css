@@ -1,70 +1,45 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+*{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.keyboard {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid purple;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: powderblue;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    margin: 5px 0;
-}
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .keyboard {
-            display: grid;
-            grid-template-columns: repeat(10, 1fr);
-            gap: 5px;
-        }
-
-        .key {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        .key:hover {
-            background-color: #e0e0e0;
-        }
-
-        .key.number {
-            display: none;
-        }
-
-        .space {
-            grid-column: span 5;
-        }
-
-        .output {
-            margin-top: 10px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 18px;
-        }
+.fl{float: left;}
+.fr{float: right;}
+.mfl{float: left; margin-left: 1%;}
+.mfl2{float: left; margin-left: 6%;}
+.bg{background-color: palegoldenrod;}
+.bg1{background-color: palegreen;}
+.bg2{background-color: paleturquoise;}
+.warpper{width: 100%; height: 100vh;}
+.container{height: 380px; width: 90%; margin: auto; margin-top: 150px;}
+.main-l{height: 350px; width: 76%; margin: 2% 0.5%;}
+.cunction{height: 30px; width: 5.31%; color: palevioletred; text-align: center; margin-bottom: 10px;}
+.number{height: 45px; width: 6%; color: palevioletred; text-align: center; margin-bottom: 10px; }
+.back{width: 9%;}
+.eng{line-height: 45px;}
+.caps{width: 11%;}
+.shift{width:14.5%;}
+.space{height: 55px; width: 6%; color: palevioletred; text-align: center; margin-bottom: 10px;}
+.sp{width: 34%;}
+.aro{width: 21.5%;}
+.arobtn{height: 55px; width: 29%;}
+.arobtnsub{height: 25px; width: 100%;}
+.ardwn{margin-top: 8px;}
+.mail-r{height: 350px; width: 22%; margin: 2% 0.5%;}
+.lnum {width: 78%;}
+.pgup{height: 30px; width: 31%; color: palevioletred; text-align: center; margin-bottom: 10px;}
+.mfl3 {float: left; margin-left: 4%;}
+.calnub{height: 45px; width: 31%; color: palevioletred; text-align: center; margin-bottom: 10px;}
+.calzeo{height: 57px; width: 66%; color: palevioletred; text-align: center; margin-bottom: 10px;}  
+.dot{height: 57px;}
+.rsym{width: 18%;}
+.end{margin-bottom: 10px; height:30px; color: palevioletred; text-align: center;}
+.mins{margin-bottom: 10px; height: 45px; color: palevioletred; text-align: center;}
+.plus{height: 98px; margin-bottom: 10px; color: palevioletred; text-align: center; line-height: 98px;}
+.enter{height: 112px; margin-bottom: 10px; color: palevioletred; text-align: center; line-height: 112px;}
+.tab{margin-right: 65%;}
+.mrt{margin-right: 40px;}
+.sft{margin-right: 110px;}
+.lent{margin-left: 70px;}
+.lsft{margin-left: 110px;}
