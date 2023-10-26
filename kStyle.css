@@ -1,46 +1,152 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+nav {
+    background-color: blueviolet;
+    color: yellowgreen;
 }
-.fl{float: left;}
-.fr{float: right;}
-.mfl{float: left; margin-left: 1%;}
-.mfl2{float: left; margin-left: 6%;}
-.bg{background-color: palegoldenrod;}
-.bg1{background-color: palegreen;}
-.bg2{background-color: paleturquoise;}
-.warpper{width: 100%; height: 100vh;}
-.container{height: 380px; width: 90%; margin: auto; margin-top: 150px;}
-.main-l{height: 350px; width: 76%; margin: 2% 0.5%;}
-.cunction{height: 30px; width: 5.31%; color: palevioletred; text-align: center; margin-bottom: 10px;}
-.number{height: 45px; width: 6%; color: palevioletred; text-align: center; margin-bottom: 10px; }
-.back{width: 9%;}
-.eng{line-height: 45px;}
-.caps{width: 11%;}
-.shift{width:14.5%;}
-.space{height: 55px; width: 6%; color: palevioletred; text-align: center; margin-bottom: 10px;}
-.sp{width: 34%;}
-.aro{width: 21.5%;}
-.arobtn{height: 55px; width: 29%;}
-.arobtnsub{height: 25px; width: 100%;}
-.ardwn{margin-top: 8px;}
-.mail-r{height: 350px; width: 22%; margin: 2% 0.5%;}
-.lnum {width: 78%;}
-.pgup{height: 30px; width: 31%; color: palevioletred; text-align: center; margin-bottom: 10px;}
-.mfl3 {float: left; margin-left: 4%;}
-.calnub{height: 45px; width: 31%; color: palevioletred; text-align: center; margin-bottom: 10px;}
-.calzeo{height: 57px; width: 66%; color: palevioletred; text-align: center; margin-bottom: 10px;}  
-.dot{height: 57px;}
-.rsym{width: 18%;}
-.end{margin-bottom: 10px; height:30px; color: palevioletred; text-align: center;}
-.mins{margin-bottom: 10px; height: 45px; color: palevioletred; text-align: center;}
-.plus{height: 98px; margin-bottom: 10px; color: palevioletred; text-align: center; line-height: 98px;}
-.enter{height: 112px; margin-bottom: 10px; color: palevioletred; text-align: center; line-height: 112px;}
-.tab{margin-right: 65%;}
-.mrt{margin-right: 40px;}
-.sft{margin-right: 110px;}
-.lent{margin-left: 70px;}
-.lsft{margin-left: 110px;}
-  
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: yellowgreen;
+}
+
+body {
+	background: #ccc;
+}
+.keyboard {
+	width: 700px;
+	height: 250px;
+	background: powderblue;
+	padding: 1%;
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.keys {
+	float: left;
+	position: relative;
+	height: 20%;
+	cursor: pointer;
+}
+.keys span {
+	position: absolute;
+	z-index: 5;
+	color: #555;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-weight: bold;
+	font-size: 12px;
+	white-space: nowrap;
+	pointer-events: none;
+}
+.caps .capspan {
+	content: '';
+	width: 5px; 
+	height: 5px;
+	background: pink;
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	z-index: 2;
+	border-radius: 50%;
+}
+.caps-on .capspan {
+	background: #c4daff;
+	box-shadow: -2px -2px 7px #87b3ff, 1px 1px 7px #87b3ff;
+}
+
+.key {
+/* 	width: 6.67%; */
+	width: calc(100% / 15);
+}
+.key-third {
+	width: calc(100% / 15 + 1.7%);
+}
+.key-two {
+/* 	width: 13.33%; */
+	width: calc(100% / 15 * 2);
+}
+.key-n-half {
+	width: calc(100% / 15 * 1.5);
+}
+.key-n-half-half {
+	--keyboard-width: 100%;
+	--width-n-half: calc(var(--keyboard-width) / 15 * 1.5);
+	--width-n-half-half: calc(var(--width-n-half) + 1.6%);
+	width: var(--width-n-half-half);
+/* 	width: var(--width-n-half); */
+}
+.key-two-n-half-half {
+	--keyboard-width: 100%;
+	--width-n-half: calc(var(--keyboard-width) / 15 * 1.5);
+	--width-n-half-half: calc(var(--width-n-half) + 5%);
+	width: var(--width-n-half-half);
+}
+.key-three {
+	width: calc(100% / 15 * 2.75);
+}
+.space {
+	width: calc(100% / 15 * 6);
+}
+.key-inner {
+	background: rgb(0,0,0);
+	background: radial-gradient(circle, rgba(31,31,31,1) 0%, rgba(19,19,19,1) 100%);
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	bottom: 2px;
+	left: 2px;
+	border-radius: 5px;
+	border: 2px solid peru;
+	border-top: 1px solid papayawhip;
+	border-bottom: 4px solid plum;
+	perspective: 500px;
+}
+.active .key-inner {
+	border: 1px solid peru;
+	border-top: 1px solid papayawhip;
+	border-bottom: 2px solid peachpuff;
+	background: palegreen;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.active .key-inner::after {
+	content: '\f577';
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 600;
+	font-size: 30px;
+	color: palegoldenrod;
+}
+
+
+* {
+  -webkit-user-select: none;  
+  -moz-user-select: none;     
+  -ms-user-select: none;     
+  user-select: none;           
+}
+
+.f-span:after, .j-span:after {
+	content: '';
+	height: 3px;
+	width: 15px;
+	border-top: 1px solid papayawhip;
+	border-radius: 5px;
+	background: paleturquoise;
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
